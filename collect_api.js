@@ -1,6 +1,6 @@
 async function ambilDataDariAPI() {
     try {
-        const response = await fetch('https://us-central1-gis-tester-401506.cloudfunctions.net/let-load');
+        const response = await fetch('https://asia-southeast2-gis-tester-401506.cloudfunctions.net/GetLocation');
         const data = await response.text();
         hasil.innerHTML = `<p>${data}</p>`;
     } catch (error) {

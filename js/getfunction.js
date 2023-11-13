@@ -1,7 +1,7 @@
 import { get } from "https://jscroot.github.io/api/croot.js";
 import {setInner,addChild } from "https://jscroot.github.io/element/croot.js";
 
-export let URLGeoJson = "https://us-central1-gis-tester-401506.cloudfunctions.net/let-load";
+export let URLGeoJson = "https://asia-southeast2-gis-tester-401506.cloudfunctions.net/GetLocation";
 export let tableTag="tr";
 export let tableRowClass="content is-small";
 export let tableTemplate=`
