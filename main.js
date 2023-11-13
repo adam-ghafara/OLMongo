@@ -1,8 +1,7 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const pointTable = document.getElementById("pointTable").getElementsByTagName('tbody')[0];
 
-    fetch("./openlyr/geodata/geopoint.json")
+    fetch("https://asia-southeast2-gis-tester-401506.cloudfunctions.net/GetLocation")
         .then(response => response.json())
         .then(data => {
             data.features.forEach(feature => {
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const pointTable = document.getElementById("territoryTable").getElementsByTagName('tbody')[0];
 
-    fetch("./openlyr/geodata/geoterritory.json")
+    fetch("https://asia-southeast2-gis-tester-401506.cloudfunctions.net/GetLocation")
         .then(response => response.json())
         .then(data => {
             data.features.forEach(feature => {
@@ -46,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const pointTable = document.getElementById("lineTable").getElementsByTagName('tbody')[0];
 
-    fetch("./openlyr/geodata/geoline.json")
+    fetch("https://asia-southeast2-gis-tester-401506.cloudfunctions.net/GetLocation")
         .then(response => response.json())
         .then(data => {
             data.features.forEach(feature => {
@@ -78,17 +77,17 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
     const waypointSource = new ol.source.Vector({
-        url: './openlyr/geodata/geopoint.json',
+        url: 'https://asia-southeast2-gis-tester-401506.cloudfunctions.net/GetLocation',
         format: new ol.format.GeoJSON()
     });
 
     const lineStringSource = new ol.source.Vector({
-        url: './openlyr/geodata/geoterritory.json',
+        url: 'https://asia-southeast2-gis-tester-401506.cloudfunctions.net/GetLocation',
         format: new ol.format.GeoJSON()
     });
 
     const polylineSource = new ol.source.Vector({
-        url: './openlyr/geodata/geoline.json',
+        url: 'https://asia-southeast2-gis-tester-401506.cloudfunctions.net/GetLocation',
         format: new ol.format.GeoJSON()
     });
     const waypointLayer = new ol.layer.Vector({
